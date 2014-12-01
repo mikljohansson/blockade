@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Blockade</string>
+    
+    <string name="menu_option_delete">Delete</string>
+    <string name="menu_option_settings">Settings</string>
+    
+    <string name="phonecalls_fragment_name">Phonecalls</string>
+	<string name="settings_activity_name">Settings</string>
+	
+	<string name="phonecall_private_number">Private number</string>
+	<string name="phonecall_allowed_through">Allowed on 3rd retry</string>
+	<string name="phonecall_default_date">0 minutes ago</string>
+	<string name="phonecall_content_description">Phonecall</string>
+    
+    <string name="pref_phonecall_category">Phonecalls</string>
+    <string name="pref_phonecall_block_private_title">Block Private Numbers</string>
+    <string name="pref_phonecall_block_private_summary">Block incoming calls from private or hidden numbers</string>
+    <string name="pref_phonecall_allow_retry_title">Allow Third Retry</string>
+    <string name="pref_phonecall_allow_retry_summary">Allow third call within 30 minutes, in case it\'s an emergency</string>
+    <string name="pref_phonecall_notify_blocked_title">Show Notification</string>
+    <string name="pref_phonecall_notify_blocked_summary">Show notification about blocked calls</string>
+    
+    <string name="msg_blocked_call">Blocked call</string>
+    <string name="msg_blocked_calls">Blocked calls</string>
+    <string name="msg_blocked_incoming_call">Blocked incoming call from private number</string>
+    <string name="msg_blocked_incoming_calls">Blocked %d incoming calls from private numbers</string>
+</resources>

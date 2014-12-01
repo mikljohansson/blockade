@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	style="@style/Widget.ListItem.Layout">
+	
+	<ImageView
+		android:id="@+id/itemThumbnail"
+		android:src="@drawable/ic_action_phone_missed"
+		android:contentDescription="@string/phonecall_content_description"
+		style="@style/Widget.ListItem.Thumbnail"/>
+    
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		style="@style/Widget.ListItem.Content">
+
+		<TextView
+			android:id="@+id/itemTitle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textIsSelectable="false"
+			android:text="@string/phonecall_private_number"
+			style="@style/Widget.ListItem.Title"/>
+		<TextView
+			android:id="@+id/itemDescription"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textIsSelectable="false"
+			android:text="@string/phonecall_allowed_through"
+			style="@style/Widget.ListItem.Description"/>
+		<TextView
+			android:id="@+id/itemModified"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textIsSelectable="false"
+			android:text="@string/phonecall_default_date"
+			style="@style/Widget.ListItem.Date"/>
+	</LinearLayout>
+</LinearLayout>

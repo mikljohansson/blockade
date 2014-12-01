@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="field_button_background_pressed">#8833b5e5</color>
+    <color name="field_button_background_focused">#8833b5e5</color>
+    <color name="field_button_background_default">#00000000</color>
+    <color name="field_layout_background">#ffffffff</color>
+    
+    <color name="textColorSecondary">#ff999999</color>
+</resources>

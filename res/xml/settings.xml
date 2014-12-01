@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <PreferenceCategory 
+        android:title="@string/pref_phonecall_category">
+	    
+	    <CheckBoxPreference 
+	    	android:key="phonecall-block-private"
+	    	android:title="@string/pref_phonecall_block_private_title"
+	    	android:summary="@string/pref_phonecall_block_private_summary"
+	    	android:defaultValue="true"/>
+    
+	    <CheckBoxPreference 
+	    	android:key="phonecall-allow-retry"
+	    	android:title="@string/pref_phonecall_allow_retry_title"
+	    	android:summary="@string/pref_phonecall_allow_retry_summary"
+	    	android:defaultValue="true"/>
+	    
+	    <CheckBoxPreference 
+	    	android:key="phonecall-notify-blocked"
+	    	android:title="@string/pref_phonecall_notify_blocked_title"
+	    	android:summary="@string/pref_phonecall_notify_blocked_summary"
+	    	android:defaultValue="true"/>
+	    
+	</PreferenceCategory>
+</PreferenceScreen>

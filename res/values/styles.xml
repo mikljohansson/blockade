@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+	Base application theme, dependent on API level. This theme is replaced
+	by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+	-->
+    <style name="AppBaseTheme" parent="Theme.Sherlock.Light">
+        <!--
+		Theme customizations available in newer API levels can go in
+		res/values-vXX/styles.xml, while customizations related to
+		backward-compatibility can go here.
+		-->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="Widget.ListItem.Layout" parent="@style/AppTheme">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">72dp</item>
+		<item name="android:paddingRight">8dp</item>
+		<item name="android:background">@drawable/bg_listitem_layout</item>
+	</style>
+    <style name="Widget.ListItem.Thumbnail" parent="@style/AppTheme">
+	    <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_gravity">center</item>
+	</style>
+    <style name="Widget.ListItem.Status" parent="@style/Widget.ListItem.Thumbnail">
+        <item name="android:layout_marginTop">20dp</item>
+	</style>
+    <style name="Widget.ListItem.Content" parent="@style/AppTheme">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+	</style>
+	<style name="Widget.ListItem.Title" parent="@android:style/TextAppearance.Medium">
+      <item name="android:layout_marginRight">8dp</item>
+	</style>
+	<style name="Widget.ListItem.Date" parent="@android:style/TextAppearance.Small">
+      <item name="android:textColor">@color/textColorSecondary</item>
+      <item name="android:textSize">13sp</item>
+	</style>
+	<style name="Widget.ListItem.Description" parent="@android:style/TextAppearance.Small">
+      <item name="android:textColor">@color/textColorSecondary</item>
+      <item name="android:textSize">13sp</item>
+	</style>
+</resources>
