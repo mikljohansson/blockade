@@ -33,13 +33,13 @@ public class PhonecallViewMapper implements IViewMapper<ContentValues> {
 		
 		switch (action) {
 			case ALLOWED:
-				thumbnailview.setImageResource(R.drawable.ic_action_phone_incoming);
+				thumbnailview.setImageResource(R.drawable.ic_list_phone_incoming);
 				descriptionview.setText(R.string.phonecall_allowed_through);
 				descriptionview.setVisibility(View.VISIBLE);
 				break;
 				
 			default:
-				thumbnailview.setImageResource(R.drawable.ic_action_phone_missed);
+				thumbnailview.setImageResource(R.drawable.ic_list_phone_missed);
 				descriptionview.setVisibility(View.GONE);
 				break;
 		}

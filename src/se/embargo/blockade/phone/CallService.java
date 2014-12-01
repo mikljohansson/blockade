@@ -21,6 +21,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v4.app.NotificationCompat.Builder;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -139,11 +140,6 @@ public class CallService extends AbstractService {
 		if (!endCall()) {
 			return false;
 		}
-
-		// Update statistics used for notification counting
-		int blocked = _prefs.getInt(SettingsActivity.PREF_BLOCKED_CALLS, 0) + 1;
-		int acked = _prefs.getInt(SettingsActivity.PREF_BLOCKED_CALLS_ACK, 0);
-		_prefs.edit().putInt(SettingsActivity.PREF_BLOCKED_CALLS, blocked).commit();
 		
 		// Insert into database
 		insert(Phonecall.Action.REJECTED);
@@ -154,19 +150,12 @@ public class CallService extends AbstractService {
 				addParentStack(MainActivity.class).
 				addNextIntent(new Intent(this, MainActivity.class)).
 				getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-	
-			PendingIntent deleteIntent = 
-				PendingIntent.getActivity(this, 0, 
-				new Intent(this, CleanupIntentService.class), 0);
 			
-			int count = blocked - acked;
 			NotificationCompat.Builder builder = new NotificationCompat.Builder(this).
 				setSmallIcon(R.drawable.ic_notification_phone_missed).
-				setNumber(count).
-				setContentTitle(getString(count > 1 ? R.string.msg_blocked_call : R.string.msg_blocked_calls)).
-				setContentText(getString(count > 1 ? R.string.msg_blocked_incoming_calls : R.string.msg_blocked_incoming_call, count)).
-				setContentIntent(contentIntent).
-				setDeleteIntent(deleteIntent);
+				setContentTitle(getString(R.string.msg_blocked_call)).
+				setContentText(getString(R.string.msg_blocked_incoming_call)).
+				setContentIntent(contentIntent);
 	
 			NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 			manager.notify(NOTIFICATION_ID, builder.build());

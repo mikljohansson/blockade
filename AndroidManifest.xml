@@ -41,7 +41,6 @@
 		</receiver>
 				
 		<service android:name="se.embargo.blockade.phone.CallService"/>
-		<service android:name="se.embargo.blockade.phone.CleanupIntentService"/>
 			
 		<provider
 			android:name="se.embargo.blockade.database.BlockadeRepository"

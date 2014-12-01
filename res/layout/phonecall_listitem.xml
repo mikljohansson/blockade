@@ -5,7 +5,7 @@
 	
 	<ImageView
 		android:id="@+id/itemThumbnail"
-		android:src="@drawable/ic_action_phone_missed"
+		android:src="@drawable/ic_list_phone_missed"
 		android:contentDescription="@string/phonecall_content_description"
 		style="@style/Widget.ListItem.Thumbnail"/>
     

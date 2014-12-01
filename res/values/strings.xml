@@ -9,7 +9,7 @@
 	<string name="settings_activity_name">Settings</string>
 	
 	<string name="phonecall_private_number">Private number</string>
-	<string name="phonecall_allowed_through">Allowed on 3rd retry</string>
+	<string name="phonecall_allowed_through">Allowed through on third retry</string>
 	<string name="phonecall_default_date">0 minutes ago</string>
 	<string name="phonecall_content_description">Phonecall</string>
     
@@ -22,7 +22,5 @@
     <string name="pref_phonecall_notify_blocked_summary">Show notification about blocked calls</string>
     
     <string name="msg_blocked_call">Blocked call</string>
-    <string name="msg_blocked_calls">Blocked calls</string>
     <string name="msg_blocked_incoming_call">Blocked incoming call from private number</string>
-    <string name="msg_blocked_incoming_calls">Blocked %d incoming calls from private numbers</string>
 </resources>
