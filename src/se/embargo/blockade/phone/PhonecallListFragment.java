@@ -1,5 +1,6 @@
 package se.embargo.blockade.phone;
 
+import se.embargo.blockade.R;
 import se.embargo.blockade.database.BlockadeRepository;
 import se.embargo.blockade.database.Phonecall;
 import se.embargo.blockade.widget.ListActionMode;
@@ -16,9 +17,10 @@ public class PhonecallListFragment extends SherlockListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        // Bind the project list view
+        // Bind the phone call list view
         PhonecallAdapter adapter = new PhonecallAdapter();
         setListAdapter(adapter);
+        setEmptyText(getString(R.string.msg_list_is_empty));
         
         ListActionMode actionmode = new ListActionMode(getSherlockActivity(), getListView());
         actionmode.setTablename(Phonecall.TABLENAME);

@@ -23,4 +23,5 @@
     
     <string name="msg_blocked_call">Blocked call</string>
     <string name="msg_blocked_incoming_call">Blocked incoming call from private number</string>
+    <string name="msg_list_is_empty">There are no blocked phone calls yet.</string>
 </resources>
