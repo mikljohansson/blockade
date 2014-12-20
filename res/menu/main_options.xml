@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item 
         android:id="@+id/editSettingsButton" 
-        android:icon="@drawable/ic_action_settings" 
+        android:icon="@drawable/ic_action_gear" 
         android:title="@string/menu_option_settings"
-        android:showAsAction="never"/>
+        android:showAsAction="ifRoom"/>
 </menu>
