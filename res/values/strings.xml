@@ -5,7 +5,7 @@
     <string name="menu_option_delete">Delete</string>
     <string name="menu_option_settings">Settings</string>
     
-    <string name="phonecalls_fragment_name">Phonecalls</string>
+    <string name="phonecalls_fragment_name">Phone calls</string>
 	<string name="settings_activity_name">Settings</string>
 	
 	<string name="phonecall_private_number">Private number</string>
@@ -13,7 +13,7 @@
 	<string name="phonecall_default_date">0 minutes ago</string>
 	<string name="phonecall_content_description">Phonecall</string>
     
-    <string name="pref_phonecall_category">Phonecalls</string>
+    <string name="pref_phonecall_category">Phone calls</string>
     <string name="pref_phonecall_block_private_title">Block Private Numbers</string>
     <string name="pref_phonecall_block_private_summary">Block incoming calls from private or hidden numbers</string>
     <string name="pref_phonecall_allow_retry_title">Allow Third Retry</string>

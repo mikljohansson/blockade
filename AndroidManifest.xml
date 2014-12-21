@@ -6,10 +6,12 @@
 
 	<uses-sdk 
 		android:minSdkVersion="10"
-		android:targetSdkVersion="16"/>
+		android:targetSdkVersion="19"/>
 	
-	<!-- Used to detect phone calls -->
+	<!-- Used to detect incoming phone calls -->
 	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>   
+	
+	<!-- Used to reject phone calls -->
 	<uses-permission android:name="android.permission.CALL_PHONE"/>
 	
 	<!-- Needed to register broadcast receiver on startup -->
