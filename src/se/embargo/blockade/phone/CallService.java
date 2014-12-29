@@ -21,7 +21,6 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
-import android.support.v4.app.NotificationCompat.Builder;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -155,7 +154,8 @@ public class CallService extends AbstractService {
 				setSmallIcon(R.drawable.ic_notification_phone_missed).
 				setContentTitle(getString(R.string.msg_blocked_call)).
 				setContentText(getString(R.string.msg_blocked_incoming_call)).
-				setContentIntent(contentIntent);
+				setContentIntent(contentIntent).
+				setAutoCancel(true);
 	
 			NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 			manager.notify(NOTIFICATION_ID, builder.build());
