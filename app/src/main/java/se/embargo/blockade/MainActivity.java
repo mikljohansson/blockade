@@ -5,14 +5,14 @@ import se.embargo.blockade.phone.CallService;
 import se.embargo.blockade.phone.PhonecallListFragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
-public class MainActivity extends SherlockFragmentActivity {
+public class MainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,12 +24,12 @@ public class MainActivity extends SherlockFragmentActivity {
 		setContentView(R.layout.main_activity);
 
 		Fragment fragment = Fragment.instantiate(this, PhonecallListFragment.class.getName());
-		getSupportFragmentManager().beginTransaction().replace(R.id.fragment, fragment).commit();
+		getFragmentManager().beginTransaction().replace(R.id.fragment, fragment).commit();
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getSupportMenuInflater();
+		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main_options, menu);
 		return true;
 	}

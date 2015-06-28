@@ -15,19 +15,19 @@ import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.ActionMode;
-import com.actionbarsherlock.view.MenuItem;
+import android.app.Activity;
+import android.view.ActionMode;
+import android.view.MenuItem;
 
 public class ListActionMode extends SelectionActionMode {
 	private static final String TAG = "SelectionListener";
 	private String _tablename;
 	
-	public ListActionMode(SherlockFragmentActivity activity, ListView listview, int menuResource) {
+	public ListActionMode(Activity activity, ListView listview, int menuResource) {
 		super(activity, listview, menuResource);
 	}
 
-	public ListActionMode(SherlockFragmentActivity activity, ListView listview) {
+	public ListActionMode(Activity activity, ListView listview) {
 		this(activity, listview, R.menu.list_actionmode_options);
 	}
 	

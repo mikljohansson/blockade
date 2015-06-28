@@ -19,8 +19,8 @@ import android.database.Cursor;
 import android.media.AudioManager;
 import android.os.Binder;
 import android.os.IBinder;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
+import android.app.Notification;
+import android.app.TaskStackBuilder;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -150,7 +150,7 @@ public class CallService extends AbstractService {
 				addNextIntent(new Intent(this, MainActivity.class)).
 				getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 			
-			NotificationCompat.Builder builder = new NotificationCompat.Builder(this).
+			Notification.Builder builder = new Notification.Builder(this).
 				setSmallIcon(R.drawable.ic_notification_phone_missed).
 				setContentTitle(getString(R.string.msg_blocked_call)).
 				setContentText(getString(R.string.msg_blocked_incoming_call)).

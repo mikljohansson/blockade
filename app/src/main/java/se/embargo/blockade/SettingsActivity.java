@@ -3,10 +3,10 @@ package se.embargo.blockade;
 import se.embargo.blockade.R;
 import android.os.Bundle;
 
-import com.actionbarsherlock.app.SherlockPreferenceActivity;
-import com.actionbarsherlock.view.MenuItem;
+import android.preference.PreferenceActivity;
+import android.view.MenuItem;
 
-public class SettingsActivity extends SherlockPreferenceActivity {
+public class SettingsActivity extends PreferenceActivity {
 	public static final String PREFS_NAMESPACE = "se.embargo.blacklist";
 
 	public static final String PREF_PHONECALL_BLOCK_PRIVATE = "phonecall-block-private";
@@ -28,7 +28,7 @@ public class SettingsActivity extends SherlockPreferenceActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		getPreferenceManager().setSharedPreferencesName(PREFS_NAMESPACE);
 		addPreferencesFromResource(R.xml.settings);
